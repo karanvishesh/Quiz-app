@@ -1,0 +1,187 @@
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", sans-serif;
+  color: white;
+}
+
+body {
+  background: #1f1f47
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  width: 400px;
+  min-height: 250px;
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 1rem;
+  padding: 1.5rem;
+  z-index: 10;
+  line-height: 2rem;
+  color: whitesmoke;
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    180deg,
+    rgba(47, 184, 255,0.42) 31.77%,
+    #5c9df1 100%
+  );
+  mix-blend-mode: color-dodge;
+  -webkit-animation: move 25s infinite alternate;
+          animation: move 25s infinite alternate;
+  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
+
+.blob:hover {
+  width: 520px;
+  height: 520px;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  box-shadow:
+    inset 0 0 0 5px rgba(255,255,255, 0.6),
+    inset 100px 100px 0 0px #fa709a,
+    inset 200px 200px 0 0px #784ba8,
+    inset 300px 300px 0 0px #2b86c5;
+}
+
+@-webkit-keyframes move {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(500px, 100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(500px, 100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+.start--section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start--header{
+    margin: 3rem 0 1.5rem 0;
+    font-size: 3em;
+}
+.start--section p{
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+.btn{
+    font-family: 'Karla', sans-serif;
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    color: whitesmoke;
+    background-color: #fa709a;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+}
+.quiz--section{
+  /* padding: 3rem 10rem; */
+  max-width: 100%;
+  text-align: center;
+}
+.quiz--option{
+  margin: 1.3rem 1.5rem;
+  background-color: #D6DBF5;
+  color: black;
+}
+.quiz--component{
+  margin: 2rem 1rem 1.5rem 2rem;
+  max-width: 100%;
+}
+.quiz--question{
+  font-size: 2em;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to { 
+      transform: rotate(360deg);
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to { 
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+.load {
+position: absolute;
+left: 50%;
+top: 30%;
+width: 100px;
+height: 100px;
+margin: 110px auto 0;
+border:solid 10px #fa709a;;
+border-radius: 50%;
+border-right-color: transparent;
+border-bottom-color: transparent;
+ -webkit-transition: all 0.5s ease-in;
+  -webkit-animation-name:             rotate; 
+  -webkit-animation-duration:         1.0s; 
+  -webkit-animation-iteration-count:  infinite;
+  -webkit-animation-timing-function: linear;
+    
+     transition: all 0.5s ease-in;
+  animation-name:             rotate; 
+  animation-duration:         1.5.0s; 
+  animation-iteration-count:  infinite;
+  animation-timing-function: linear; 
+}
+
+.gameend--message{
+  display: inline;
+  margin: 1rem;
+  font-size: 1.8em;
+}
+.check--button{
+  margin: 1rem;
+}
